@@ -1,0 +1,161 @@
+:root {
+  --bg: #0b1020;
+  --card: #131a2e;
+  --text: #e8edff;
+  --muted: #a9b4da;
+  --accent: #7aa2ff;
+  --accent-2: #4ed8b0;
+  --border: #28314e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: linear-gradient(180deg, #070b18, var(--bg));
+  color: var(--text);
+}
+
+.hero {
+  padding: 2rem 1.25rem 1rem;
+  text-align: center;
+}
+
+.hero h1 {
+  margin-bottom: 0.5rem;
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+}
+
+.hero p {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+.layout {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.tracker {
+  grid-column: span 12;
+}
+
+.roadmap {
+  grid-column: span 12;
+}
+
+.practice {
+  grid-column: span 12;
+}
+
+@media (min-width: 980px) {
+  .tracker {
+    grid-column: span 4;
+    position: sticky;
+    top: 1rem;
+    height: fit-content;
+  }
+
+  .roadmap {
+    grid-column: span 8;
+  }
+
+  .practice {
+    grid-column: span 12;
+  }
+}
+
+.muted {
+  color: var(--muted);
+  margin-top: 0;
+}
+
+.topic {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
+  overflow: hidden;
+}
+
+.topic summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.9rem 1rem;
+  background: #10172a;
+  border-bottom: 1px solid var(--border);
+  font-weight: 700;
+}
+
+.topic summary::-webkit-details-marker {
+  display: none;
+}
+
+.subtopics {
+  padding: 0.6rem 1rem 1rem;
+}
+
+label.item {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  margin-bottom: 0.6rem;
+}
+
+input[type="checkbox"] {
+  margin-top: 0.2rem;
+  accent-color: var(--accent-2);
+}
+
+.progress-wrap {
+  display: grid;
+  gap: 0.4rem;
+  margin: 1rem 0;
+}
+
+progress {
+  width: 100%;
+  height: 14px;
+}
+
+.btn-secondary {
+  border: 1px solid var(--border);
+  background: #121a2f;
+  color: var(--text);
+  padding: 0.55rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.question {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.8rem;
+  margin-bottom: 0.7rem;
+  background: #10172a;
+}
+
+.question h4 {
+  margin: 0 0 0.35rem;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  text-align: center;
+  padding: 1rem;
+}

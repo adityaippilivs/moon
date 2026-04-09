@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Engineering & Data Science Roadmap Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>Data Engineering & Data Science Roadmap</h1>
+    <p>One place to learn, practice, and track your progress.</p>
+  </header>
+
+  <main class="layout">
+    <aside class="card tracker" aria-label="Progress tracker">
+      <h2>Your Progress Tracker</h2>
+      <p class="muted">Check topics as you complete them. Progress is saved in your browser.</p>
+      <div class="progress-wrap">
+        <label for="overall-progress">Overall Completion</label>
+        <progress id="overall-progress" value="0" max="100">0%</progress>
+        <span id="progress-text">0% completed</span>
+      </div>
+      <button id="reset-progress" class="btn-secondary">Reset Progress</button>
+    </aside>
+
+    <section class="roadmap card" aria-label="Roadmap topics">
+      <h2>Main Roadmap Topics</h2>
+      <p class="muted">Main heads with subtopics for Data Engineering and Data Science.</p>
+      <div id="topics-container"></div>
+    </section>
+
+    <section class="practice card" aria-label="Practice questions">
+      <h2>Practice Questions</h2>
+      <p class="muted">Use these interview-style and concept questions to test yourself.</p>
+      <div id="questions-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Tip: Review weekly, mark progress, and focus on one main head at a time.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
